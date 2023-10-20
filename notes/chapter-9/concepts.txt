@@ -1,0 +1,40 @@
+Every variable you declare is allocated enough memory to store the max value of that
+variable type.
+
+Along with this, each variable has an address, which is the first byte in memory for 
+that variable.
+
+When we need to work with the address to a variable we use the & operator and variable name.
+
+double amount = 0; //declares a double called 'amount' in memory.
+
+cout << &amount will print the memory address of amount.
+
+NOTE: This is not the same as using & to make a reference variable. Ex: int& r = i;
+
+Reference Variables
+
+Reference Variables act as an alias for another variable.
+It's called a reference variable since it refers to another variable.
+
+ex: int jellyDounuts;
+getOrder(jellyDounuts);
+
+void getOrder(int &donuts){
+    cout << "how many donuts do you want?";
+    cin >> donuts;
+}
+
+in this function, getOrder, the donuts parameter is a reference variable. It receives
+the address of the jellyDonuts variable. It works LIKE a pointer because it points
+to the memory address of jellyDonuts.
+
+When the user enters a quantity of donuts in the cin operation, the cin statement
+uses the donuts reference variable to indirectly store the value in the jellyDonuts
+variable.
+
+When storing a value in the donuts variable, we do not have to specify that the value
+should actually be stored in the jellydonuts memory address. C++ handles that automatically.
+
+In C++, a pointer variable is just another way to handle performing operations like this,
+and work with pieces of data.

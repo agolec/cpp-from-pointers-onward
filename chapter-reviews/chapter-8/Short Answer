@@ -1,0 +1,35 @@
+1) why is the linear search also called sequential search?
+
+A) Linear Search performs a search in a line from the first item to the last, in line.
+It is also called Sequential because it performs this operation in sequence from the 
+beginning to the end of the sequence.
+
+2) If a linear search function is searching for a value that is stored in the last element 
+of a 10,000 element array, how many elements would the search code have to read to locate
+the value?
+
+A) All 10,000 elements. It would find the element it needs in the 10,000th element.
+
+3) In an average case involving an array of N elements, how many times will
+a linear seach function have to read the array to locate a specific value?
+
+A) N/2 times, on average. If N = 10, then 10/2, or 5 times, for an array of 10 elements.
+
+4) A binary search function is searching for a value that is stored in the middle element
+of an array. How many times will the function read an element in the array before finding
+the value?
+
+A) 1. It will find the element on the first read.
+
+5) What is the maximum number of comparisons that a binary search function will make while searching for a value in a 1,000 element array?
+
+A) 10.
+
+6) Why is the bubble sort inefficient for large arrays?
+
+A) Bubble sort has to make multiple passes across the array to organize all it's data, and it must do this one element at a time.
+The first pass is just to make sure that the highest value is placed at the end of the array, or lowest value is placed at the start, depending on implementation.
+
+It must then continue scanning through the remaining elements, removing the final element from consideration each time it makes a pass, until the entire array is sorted.
+
+7)

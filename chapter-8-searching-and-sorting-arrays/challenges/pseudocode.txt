@@ -1,0 +1,18 @@
+START
+    DISPLAY PROMPT 'enter a charge account number'
+    INPUT Charge Account Number.
+    GO TO LINEAR SEARCH FUNCTION
+    If LINEAR SEARCH = TRUE
+        DISPLAY MESSAGE "Number was valid."
+    Else
+        DISPLAY MESSAGE "Number was invalid."
+
+END
+
+LINEAR SEARCH FUNCTION START
+    Check Charge Account Number Input from user on line 3.
+    For each element in charge account, check if user input number is present.
+    If number user input is present
+        Return true
+    Else If Number user entered is not present
+        Return false
