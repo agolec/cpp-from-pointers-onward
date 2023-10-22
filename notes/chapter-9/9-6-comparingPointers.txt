@@ -1,0 +1,32 @@
+If one memory address comes before another address in memory, the first address is
+considered "less than" the second. C++'s relational operators may be used
+to compare pointer values.
+
+pointers may be compared with any of C++'s relational operators.
+
+>, <, ==, !=, >=, <=
+
+Inside an array, memory addresses are stored in consecutive memory addresses.
+So the address 0 comes before the address 1. 1 is > than 0.
+
+To perform this kind of comparison, the code would look like this:
+
+int* pointerToSet = nullPtr;
+const int SIZE = 5;
+int set[SIZE] = { 0,5,10,3,49};
+pointerToSet = &set;
+
+if(&set[1] > &set[0])
+
+if(set < &set[4])
+
+if(set == &set[0])
+
+if(&set[2] != &arr[3])
+
+
+USES:
+
+Comparing addresses allows us to make sure we do not go beyond the boundaries of an array.
+
+Program 9-10 shows us this.

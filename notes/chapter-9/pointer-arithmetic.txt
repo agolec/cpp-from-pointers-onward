@@ -1,0 +1,8 @@
+Some math operations can be performed on pointers.
+
+The contents of a pointer variable may be changed with mathematical statements that
+perform addition or subtraction.
+
+This is demonstrated in program 9-9. The first loop increments the pointer variable, 
+stepping through each element of the array. The second loop decrements the pointer, 
+stepping it through the array backward.
