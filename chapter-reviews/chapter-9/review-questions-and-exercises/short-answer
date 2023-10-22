@@ -1,0 +1,25 @@
+1) what does the indirection operator do?
+
+A) It's a unary operator meant to de-reference a pointer. With the indirection operator,
+we can retrieve the value at the memory address being pointed to.
+
+2) Look at the following code:
+
+    int x = 7;
+    int *iptr = &x;
+
+    What will be displayed if you send the expression *iptr to cout?
+    What happens if you send iptr to cout instead?
+
+A) *iptr should display the value 7 in cout. 
+
+    If we say cout << iptr << endl, we would output the memory address that the pointer is pointing to instead of the value being contained at that memory address.
+
+3) So far you have learned three uses for the * operator. What are they?
+
+A) the * operator can be used between two numbers to multiply them together.
+
+* can also be used as a urnary operator to de-reference a pointer variable, retrieving the
+value at the memory address being pointed to. Whether that variable is an array or single value type.
+
+* can be used with / to make the multi-line comment?
