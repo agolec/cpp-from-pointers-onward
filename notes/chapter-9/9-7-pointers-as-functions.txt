@@ -1,0 +1,109 @@
+pointers can be used as function parameters. This gives us access to the original variable
+being passed in as an argument. The argument is said to be passed by reference in this
+case.
+
+void doubleValue(int *val){
+    *val += 2;
+}
+
+although this method is a void return type, whatever int argument that is being passed in
+will have a value twice it's original size once this method finishes execution and 
+returns from the call to doubleValue.
+
+
+
+POINTERS TO CONSTANTS
+
+We've seen how an item/variable's  address can ba passed into a pointer parameter,
+and how the pointer can be used to modify the item that was passed as an argument.
+
+Sometimes it is necessary to pass the address of a const item into a pointer.
+When this is the case, the pointer must be defined as a pointer to a const item.
+
+Consider the following array definition:
+
+const int SIZE = 6;
+const double payRates[SIZE] = {18.55,17.95,
+                            12.85,14.95,
+                            10.35,18.89};
+
+in this code, payRates is an array of const doubles. This means that each element
+of the array is a cont double. If we want to pass payRates into a pointer parameter,
+the parameter must be declared as a pointer to const double.
+
+pointers to constants are used in function parameters?
+const double *rates
+
+void displayRayes(const double *rates, int size){
+    //set the numeric output formatting
+    cout << setprecision(2) << fixed << showpoint;
+
+    //Display all the pay rates.
+    for(int i = 0; i < size; i++){
+        cout << "The payrate for employee 
+            (i+1) is: $" << *rates(i + 1) << endl;
+    }
+}
+in the function header, notice we use const double *rates to refer to the payRates array. 
+This is a pointer to const double.
+
+Note: the word const in the method definition is applied to the item/value/variable/named
+thing that rates is pointing to, which we're implying is payRates.
+
+
+SEE Program 9-13
+
+------
+
+Constant Pointers
+
+Pointers to Const =/= Constant Pointers.
+
+A pointer to constants is a pointer that points to constant data.
+You can also use the keyword constant to declare a Constant Pointer.
+
+The differences between a pointer to a constant, and a constant pointer are below:
+
+- A pointer to a constant points to a constant item. The data the pointer points to 
+cannot change, but the pointer itself can.
+
+- A constant pointer is a memory address that will never change. The pointer itself
+is constant.
+
+Ex:
+
+int value = 22;
+int * const ptr = &value;
+
+ptr will only ever be the memory address to the variable 'value'.
+
+If we write code that attempts to make ptr point to any other memory address/variable.
+
+----
+
+CONSTANT POINTERS TO CONSTANTS
+
+Constant Pointers to Constants are constant pointers, whose value is also
+a constant. 
+
+THE MOST IMPORTANT TAKEAWAY IS THIS: 
+        
+        The Address and the value cannot change in a constant pointer to a constant.
+
+int value = 22;
+const int * const ptr = &value;
+
+In this code, ptr is a constant pointer, to a const int. The word const appears
+before int, indicating the pointer points to a const int, and it also appears after
+the asterisk, indicating that ptr is a constant pointer.
+
+
+Figure 9-10
+
+        * indicates that ptr is a constant pointer.
+                 __|______
+    ___________ |         |
+   |const int  || * const | ptr
+   |___________||_________|
+        |
+This is what ptr points to.
