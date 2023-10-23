@@ -23,3 +23,10 @@ A) the * operator can be used between two numbers to multiply them together.
 value at the memory address being pointed to. Whether that variable is an array or single value type.
 
 * can be used with / to make the multi-line comment?
+
+4) What math operations are alllowed on pointers?
+
+A) Addition and subtraction.
+
+5)Assuming that ptr is a pointer to an int, what happens when you add 4 to ptr?
+A) if we add 4 to ptr without dereferencing it, we change the address to 4, I think.
